@@ -1,10 +1,33 @@
 ## Informação
-|               |                 |
-| -                 |:-                 |
-| Pacote            | nwk-boilerplate   |
-| Descrição         | Node Webkit Boilerplate ajuda a construir aplicações web/desktop velozes, robustos, e adaptáveis ou app. Comece o seu projeto com o conhecimento combinado e esforço de 100s de desenvolvedores, tudo em um prático pacote pequeno.|
-| Versão            | 0.0.1 - Alpha     |
-| Colaboradores     | [Thiago Ribeiro Filadelfo](thiago.filadelfo@gmail.com) |
+
+<table>
+   <tbody>
+      <tr>
+         <td align="left">Pacote</td>
+         <td align="left">
+            <p>nwk-boilerplate</p>
+         </td>
+      </tr>
+      <tr>
+         <td align="left">Descrição</td>
+         <td align="left">
+            <p>Node Webkit Boilerplate ajuda a construir aplicações web/desktop velozes, robustos, e adaptáveis ou app. Comece o seu projeto com o conhecimento combinado e esforço de 100s de desenvolvedores, tudo em um prático pacote pequeno.</p>
+         </td>
+      </tr>
+      <tr>
+         <td align="left">Versão</td>
+         <td align="left">
+            <p>0.0.1 - Alpha</p>
+         </td>
+      </tr>
+       <tr>
+         <td align="left">Colaboradores</td>
+         <td align="left">
+            <p> [Thiago Ribeiro Filadelfo](thiago.filadelfo@gmail.com)</p>
+         </td>
+      </tr>
+   </tbody>
+</table>
 
 
 ## Instalação
@@ -12,6 +35,19 @@
     git clone https://github.com/trfiladelfo/nwk-boilerplate.git <nome do projeto>
 
 ## Preparação do Ambiente
+
+### Node Modules
+Esses módulos não precisam instalar todas as vezes, como estamos fazendo -g (global), quer dizer que ele vai instalar de forma a deixar uma cópia do executável disponível offline.
+
+```sh
+$ npm install -g gulp
+$ npm install -g nw
+$ npm install -g node-webkit-builder
+
+```
+
+### Projeto NWK
+Para inicializar o projeto Node Webkit.
 
 ```sh
 $ cd <nome do projeto>
@@ -26,11 +62,30 @@ Comandos mais usado durante o desenvolvimento do Webapp, no terminal use o segui
 ```sh
 gulp <option>
 ```
-|     Option          |                   |
-| -             |:-                 |
-|`build`     | Cria uma distribuição de seu aplicativo para as plataformas (Windows x32, x64; Linux x32, x64 e OSx x32, x64. |
-|`watch`     | Comando permite auto-compilação em tempo de desenvolvimento, quando é salvo ou adicionado um arquivo automaticamente será compilado, copiado ou interpretado para a pasta webapp (pasta de compilados).  |
-|`compile`     | Semelhante ao watch, porem não executa múltiplas vezes, somente executa quando o usuário digitar o comando, ele limpará os arquivos compilado e compilará todos novamente.  |
+
+<table border="0">
+   <tbody>
+      <tr>
+         <td align="left"><code>build</code></td>
+         <td align="left">
+            <p>Cria uma distribuição de seu aplicativo para as plataformas (Windows x32, x64; Linux x32, x64 e OSx x32, x64.</p>
+         </td>
+      </tr>
+      <tr>
+         <td align="left"><code>watch</code></td>
+         <td align="left">
+            <p>Comando permite auto-compilação em tempo de desenvolvimento, quando é salvo ou adicionado um arquivo automaticamente será compilado, copiado ou interpretado para a pasta webapp (pasta de compilados).</p>
+         </td>
+      </tr>
+      <tr>
+         <td align="left"><code>compile</code></td>
+         <td align="left">
+            <p>Semelhante ao watch, porem não executa múltiplas vezes, somente executa quando o usuário digitar o comando, ele limpará os arquivos compilado e compilará todos novamente.</p>
+         </td>
+      </tr>
+   </tbody>
+</table>
+
 
 ## Estrutura do projeto
 O projeto foi concebido depois de muitas tentativas para deixar o mais prático possível e o mais flexível para suportar maior parte das "linguagens" e variações de estilo de desenvolvimento.
@@ -38,13 +93,6 @@ O projeto foi concebido depois de muitas tentativas para deixar o mais prático 
 A estrutura base do projeto contém as seguintes pastas:
 
 <table>
-   <thead>
-      <tr>
-         <th align="left"></th>
-         <th align="left"></th>
-         <th align="left"></th>
-      </tr>
-   </thead>
    <tbody>
       <tr>
          <td><code>src</code></td>
@@ -187,9 +235,7 @@ A estrutura base do projeto contém as seguintes pastas:
       <tr>
          <td><code>webapp</code></td>
          <td>
-            <p>
-               Pasta que receberá os arquivos compilados para depois empacotar em um arquivo executável conforme as plataformas.
-            </p>
+            <p>Pasta que receberá os arquivos compilados para depois empacotar em um arquivo executável conforme as plataformas.</p>
             <p>
             <table border="0">
                <tbody>
@@ -214,14 +260,9 @@ A estrutura base do projeto contém as seguintes pastas:
 </table>
 
 
+
 ## Suporte de linguagem
 <table>
-    <thead>
-      <tr>
-         <th align="left"></th>
-         <th align="left"></th>
-      </tr>
-   </thead>
    <tbody>
       <tr>
          <td align="left"><code>0.0.1</code></td>
