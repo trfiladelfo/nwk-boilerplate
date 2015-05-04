@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
 	uglify = require('gulp-uglify'),
 	sass = require('gulp-sass'),
-	rimraf = require('gulp-rimraf'),
+	del = require('del'),
 	rename = require('gulp-rename'),
 	concat = require('gulp-concat'),
 	less = require('gulp-less'),
@@ -69,13 +69,11 @@ gulp.task('images',['copy_icons'], function() {
 // Limpando o projeto
 //-----------------------------------------------------------------------------------------
 gulp.task('clear', function() {
-	return gulp.src(['webapp/assets', 'webapp/views', 'webapp/node_modules', 'webapp/bower_components', 'cache'], { read: false })
-	.pipe(rimraf({ force: true }));
+	return del(['webapp/assets', 'webapp/views', 'webapp/node_modules', 'webapp/bower_components', 'cache']);
 });
 
-gulp.task('clear_build', function() {
-	return gulp.src(['build/**/*'], { read: false })
-	.pipe(rimraf({ force: true }));
+gulp.task('clear:build', function() {
+	return del(['build/**/*']);
 });
 
 
@@ -111,13 +109,13 @@ gulp.task('coffeescript', function() {
 //-----------------------------------------------------------------------------------------
 // Copiando arquivos para o publico
 //-----------------------------------------------------------------------------------------
-gulp.task('copyfiles_fonts', function() {
+gulp.task('copyfiles:fonts', function() {
 	gulp.src('src/main/resources/**/*.{eot,svg,ttf,woff,woff2}')
 	.pipe(gulp.dest('webapp/assets/fonts'));
 });
 
 
-gulp.task('copy_icons', function() {
+gulp.task('copy:icons', function() {
 	gulp.src('src/main/resources/images/icons/**/*.{icns,ico}')
 	.pipe(gulp.dest('webapp/assets/images/icons'));
 });
@@ -146,7 +144,7 @@ gulp.task('html', function() {
 //-----------------------------------------------------------------------------------------
 gulp.task('watch', function() {
 	gulp.watch('src/main/resources/images/**/*.{gif,jpg,jpeg,png}', ['images']);
-	gulp.watch('src/main/resources/images/icons/**/*.{icns,ico}', ['copy_icons']);
+	gulp.watch('src/main/resources/images/icons/**/*.{icns,ico}', ['copy:icons']);
 	gulp.watch('src/main/scripts/javascript/**/*.js', ['jscript']);
 	gulp.watch('src/main/scripts/coffeescript/**/*.coffee', ['coffeescript']);
 	gulp.watch(['src/main/styles/sass/**/*.sass', 'src/main/styles/scss/**/*.scss'], ['compass']);
@@ -160,7 +158,7 @@ gulp.task('watch', function() {
 //-----------------------------------------------------------------------------------------
 // Build o webapp com o Node Webkit
 //-----------------------------------------------------------------------------------------
-gulp.task('build',['clear_build'],function() {
+gulp.task('build',['clear:build'],function() {
 	var nw = new nwbuilder({
         version: '0.11.0',
         files: 'webapp/**/**',

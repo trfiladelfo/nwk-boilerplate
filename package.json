@@ -1,6 +1,6 @@
 {
   "name": "Name",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "author": {
     "name": "Thiago Ribeiro Filadelfo",
@@ -20,23 +20,23 @@
     "toolbar": false
   },
   "devDependencies": {
+    "del": "^1.1.1",
     "gulp": "^3.8.11",
+    "gulp-cache": "*",
     "gulp-coffee": "*",
     "gulp-concat": "*",
+    "gulp-html-minifier": "*",
+    "gulp-imagemin": "*",
+    "gulp-install": "*",
     "gulp-jade": "*",
     "gulp-jshint": "*",
-    "gulp-imagemin": "*",
-    "gulp-cache": "*",
     "gulp-less": "*",
     "gulp-minify-css": "*",
     "gulp-rename": "*",
-    "gulp-rimraf": "*",
     "gulp-sass": "*",
     "gulp-uglify": "*",
-    "gulp-watch":"*",
-    "gulp-html-minifier":"*",
-    "gulp-install":"*",
-    "node-webkit-builder":"*",
-    "jshint-stylish":"*"
+    "gulp-watch": "*",
+    "jshint-stylish": "*",
+    "node-webkit-builder": "*"
   }
 }
